@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="utility-classes.css">
+    <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="image/x-icon" href="https://i.scdn.co/image/ab6775700000ee85c2dbbe16b0e34990ab1bf7a7" sizes="200*150">
+   <!-- <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/78/Spotify_2.png" sizes="200*200"> -->
+</head>
+
+<body>
+
+
+
+    <div class="container flex" style="background-color: black;">
+        <div class="left border black">
+            <div class="home grey bodradius">
+                <div class="logo">
+<div class="close hambuger" style="float: right; margin: 10px;" ><i class="fa-solid fa-xmark invert " id="closed"></i></div>
+                    <img class="invert" style="width: 100px; margin: 5px;"
+                        src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
+                        alt="logo">
+                </div>
+
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="search.svg" alt="search">Search</li>
+                </ul>
+
+                </ul>
+            </div>
+            <div class="library grey bodradius">
+                <ul>
+                    <li><img src="library.svg" class="invert" style="width:20px;" alt="library"> library</li>
+                    <li>
+                        <div class="maincontainer">
+
+<div class="musiclist" style="background-color:#313030;height: 40px;padding: 8px;border-radius: 10px;margin: 5px;cursor: pointer;">
+<div class="songlist" style="display: flex;justify-content: space-between;">
+    <img src="music.svg" class="invert" alt="musicsymbol">
+   <div  style="overflow: hidden;height: 20px;"> <p class="songnames">song name</p></div>
+    <img src="play1.svg" onclick="music1()" class="invert">
+</div>
+</div>
+
+<div class="musiclist" style="background-color:#313030;height: 40px;padding: 8px;border-radius: 10px;margin: 5px;cursor: pointer;">
+    <div class="songlist" style="display: flex;justify-content: space-between;">
+        <img src="music.svg" class="invert" alt="musicsymbol">
+      <div  style="overflow: hidden;height: 20px;">  <p class="songnames">song name</p></div>
+        <img src="play1.svg" onclick="music2()" class="invert">
+    </div>
+    </div>
+
+    
+    <div class="musiclist" style="background-color:#313030;height: 40px;padding: 8px;border-radius: 10px;margin: 5px;cursor: pointer;">
+        <div class="songlist" style="display: flex;justify-content: space-between;">
+            <img src="music.svg" class="invert" alt="musicsymbol">
+          <div  style="overflow: hidden;height: 20px;">    <p class="songnames" >song name</p></div>
+            <img src="play1.svg" onclick="music3()" class="invert">
+        </div>
+        </div>
+        
+        <div class="musiclist" style="background-color:#313030;height: 40px;padding: 8px;border-radius: 10px;margin: 5px;cursor: pointer;">
+            <div class="songlist" style="display: flex;justify-content: space-between;">
+                <img src="music.svg" class="invert" alt="musicsymbol">
+              <div style="overflow: hidden;height: 20px;">  <p class="songnames">song name</p>  </div>
+                <img src="play1.svg" onclick="music4()" class="invert">
+            </div>
+            </div>
+
+            <div class="musiclist" style="background-color:#313030;height: 40px;padding: 8px;border-radius: 10px;margin: 5px;cursor: pointer;">
+                <div class="songlist" style="display: flex;justify-content: space-between;">
+                    <img src="music.svg" class="invert" alt="musicsymbol">
+                  <div  style="overflow: hidden;height: 20px;" > <p class="songnames" >song name</p></div>
+                    <img src="play1.svg" onclick="music5()" class="invert">                </div>
+                </div>
+
+                <div class="musiclist" style="background-color:#313030;height: 40px;padding: 8px;border-radius: 10px;margin: 5px;cursor: pointer;">
+                    <div class="songlist" style="display: flex;justify-content: space-between;">
+                        <img src="music.svg" class="invert" alt="musicsymbol">
+                       <div  style="overflow: hidden;height: 20px;"><p class="songnames" >song name</p></div>
+                        <img src="play1.svg" onclick="music6()" class="invert">                    </div>
+                    </div>
+
+
+                            <div class="playlistcrate bodradius">
+                                <h4>Create your first playlist</h4>
+                                <p style="font-size: 18px; margin-top: 10px;">it's easy will help you</p>
+                                <button type="button" id="creteplay-button">Create playlist</button>
+
+                            </div>
+
+
+
+
+
+
+
+                            <div class="main-2">
+                                <div class="playlistcrate bodradius">
+                                    <h4>Let’s find some podcasts to follow</h4>
+                                    <p style="font-size: 18px; margin-top: 10px;">We’ll keep you updated on new episodes
+                                    </p>
+                                    <button type="button" id="creteplay-button">Browse podcasts</button>
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+                    </li>
+
+                    <li style="margin-top: 50px; color: #b3b3b3;">Cookies</li>
+                    <li>
+                        <label for="language"><img
+                                style="width: 50px; border-radius: 50px;margin-top: 12px; cursor: pointer;"
+                                src="data:image/png;base64,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">
+                        </label>
+                        <div id="google_translate_element" style="padding: 10px;">languages</div>
+                       
+                       
+<!--                        
+                        <select name="Language" id="language">     
+                            <div id="google_translate_element">language</div> -->
+                            
+                            
+                            <!-- <option value="English">English</option>
+                            <option value="English">Hindi</option>
+                            <option value="English">Gujrati</option> -->
+
+
+                        </select> 
+
+
+                    </li>
+
+
+
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="right border">
+            <div class="header" style="display: flex;">
+                <div class="nav" style="display: flex; margin: 5px;">
+                    <!-- left -->
+<div class="hamburgermenu invert hambuger "><img height="38px" width="35px" src="hamburger.svg" alt="menu"></div>
+
+
+                    <div style="background-color: black;border-radius: 50px;height: 38px; margin: 3px;"> <svg
+                            class="invert" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                            style="padding: 5px;" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#000000"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <!-- //right -->
+                    <div style="background-color: black;border-radius: 50px;height: 38px;margin: 3px;"> <svg
+                            class="invert" style="padding: 5px;" xmlns="http://www.w3.org/2000/svg" width="35"
+                            height="35" viewBox="0 0 24 24" fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#000000"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+
+                </div>
+                <div class="button">
+                    <button id="Signup">Signup</button>
+                    <button id="Login">Log in</button>
+
+                </div>
+
+
+            </div>
+            <div class="spotifyplaylist header2">
+                <h1 class="white">Spotify playlist</h1>
+                <div class="cardcontainer">
+                    <div class="card" onmouseover="show1()" onmouseout="hide1()">
+<div class="playbutton" id="show1" style="opacity: 0;transition: all 0.3s ease-in ;">
+    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+        <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+    </svg>
+    
+                        </div>
+
+                        <img  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebcb6926f44f620555ba444fca/1/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card" onmouseover="show()" onmouseout="hide()" >
+
+                        <div class="playbutton" id="show" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+
+                        <img src="	https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb8f553f96d564d1005a92d131/2/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card" onmouseover="show2()" onmouseout="hide2()" >
+
+                        <div class="playbutton" id="show2" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+
+                        <img src="	https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebe1e00861cdb6bf56b14a1118/3/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card" onmouseover="show3()" onmouseout="hide3()">
+
+                        <div id="show3" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+                        <img src="	https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebf78923904ab4bb312f36e788/4/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card" onmouseover="show4()" onmouseout="hide4()">
+
+                        <div id="show4" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+
+                        <img src="	https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb7004f7b65ad1bb1e4e4582bc/5/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card" onmouseover="show5()" onmouseout="hide5()">
+
+                        <div id="show5" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+                        <img src="	https://seed-mix-image.spotifycdn.com/v6/img/artist/28pMYmVYi6dI3wR8aFPS9L/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card" onmouseover="show6()" onmouseout="hide6()">
+
+                        <div id="show6" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+                        <img src="	https://seed-mix-image.spotifycdn.com/v6/img/artist/63QHbwCDdJ50C72D4ojeo1/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+                    <div class="card"onmouseover="show7()" onmouseout="hide7()">
+
+                        <div id="show7" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+                        <img src="	https://seed-mix-image.spotifycdn.com/v6/img/chill/35WVTyRnKAoaGExqgktVyb/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+
+                    <div class="card" onmouseover="show8()" onmouseout="hide8()"> 
+
+                        <div id="show8" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+                        <img src="	https://seed-mix-image.spotifycdn.com/v6/img/twenty_tens/7HCqGPJcQTyGJ2yqntbuyr/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+
+                    <div class="card" onmouseover="show9()" onmouseout="hide9()">
+
+                        <div id="show9" class="playbutton" style="opacity: 0;transition: all 0.3s ease-in ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" fill="#000000"/>
+                            </svg>
+                            
+                                                </div>
+
+                        <img src="	https://seed-mix-image.spotifycdn.com/v6/img/romantic/5Z8nzSJRSo4HRcUOzemnC1/en-GB/default"
+                            alt="song1">
+
+                        <h2>Daily Mix 1</h2>
+                        <p style="color: #a5a0a0;">pritam,anirudh</p>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+</div>
+
+<div class="playbar">
+    <div class="songinfo" style=" padding: 5px; display: flex; justify-content: space-between;">
+        <span id="songname" style="font-size: 18px;">Song1-Mashup.mp3 </span>
+<div id="volume" style="display: flex;"><img onclick="mute()" src="volume.svg"  class="invert"> <input style="margin: 5px;" id="myRange" type="range" min="0" value="100" max="100"> </div>
+
+</div>
+    <div class="playbuttons">
+
+
+        
+        <div class="buttonsss">
+        <img class="invert" src="previous.svg" alt="previous">
+        <i class="fa-solid fa-play" onclick="main()" id="masterpaly" style="font-size: 30px;padding: 5px;" ></i>
+        <!-- <img class="invert" onclick="main()" src="play.svg" alt="play"> -->
+        <img class="invert "  id="nextsong" src="next.svg" alt="next"></div>
+
+    </div>
+    <div class="playtime" style="text-align: center;">
+
+        <span id="currenttime"></span>
+        <input type="range" name="range" id="progressbar" min="0" value="0" max="100">
+    
+   <span id="durationfirst"></span>
+    
+    </div>
+     </div>
+
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/cba4f0b217.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+.flex{
+    display: flex;
+}
+
+.justify-content{
+    justify-content: center;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.border{
+    border: 2px solid ;
+    /* margin: 5px; */
+}
+
+.black{
+    background-color: black;
+}
+
+.invert{
+    filter: invert(1);
+}
+ .grey{
+    background-color: #121212;
+ }
+
+
+ .bodradius{
+    border-radius: 10px;
+ }
+
+
+
+
+ .white{
+    color: white;
+ }
+
+
+
+
+
+/* scrollbar  */
+
+/* Webkit (Safari/Chrome) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Dark background color */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666; /* Lighter color for the thumb */
+    border-radius: 6px;
+    border: 3px solid #333; /* Dark color for the border */
+}
+
+/* Firefox */
+/* Firefox does not currently support scrollbar styling with CSS */
+
+/* Internet Explorer */
+/* Internet Explorer does not currently support scrollbar styling with CSS */
+
+
+
+
+
+
+
+#myRange {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+  }
+  
+  #myRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: black;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  #myRange::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: black;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+
+
+
+
+  #progressbar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3; /* Gray background */
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  #progressbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: black; /* Black dot */
+    border-radius: 50%; /* Round slider handle */
+    cursor: pointer;
+  }
+  
+  #progressbar::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: black; /* Black dot */
+    border-radius: 50%; /* Round slider handle */
+    cursor: pointer;
+  }
+  
+
